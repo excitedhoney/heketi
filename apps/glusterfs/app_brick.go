@@ -1,16 +1,10 @@
 package glusterfs
 
 import (
-"encoding/json"
-"fmt"
-"math"
 "net/http"
 
 "github.com/boltdb/bolt"
 "github.com/gorilla/mux"
-"github.com/heketi/heketi/pkg/db"
-"github.com/heketi/heketi/pkg/glusterfs/api"
-"github.com/heketi/heketi/pkg/utils"
 )
 
 func (a *App) BrickDelete(w http.ResponseWriter, r *http.Request) {
