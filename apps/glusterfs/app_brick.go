@@ -13,11 +13,6 @@ import (
 "github.com/heketi/heketi/pkg/utils"
 )
 
-const (
-	VOLUME_CREATE_MAX_SNAPSHOT_FACTOR = 100
-)
-
-
 func (a *App) BrickDelete(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	id := vars["id"]
