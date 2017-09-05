@@ -366,6 +366,11 @@ func (a *App) SetRoutes(router *mux.Router) error {
 			Pattern:     "/volumes",
 			HandlerFunc: a.VolumeList},
 
+		rest.Route{
+			Name:        "BrickDelete",
+			Method:      "DELETE",
+			Pattern:     "/bricks/{id:[A-Fa-f0-9]+}",
+			HandlerFunc: a.BrickDelete},
 		// Backup
 		rest.Route{
 			Name:        "Backup",
