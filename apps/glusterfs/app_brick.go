@@ -17,6 +17,7 @@ func (a *App) BrickDelete(w http.ResponseWriter, r *http.Request) {
 		var err error
 		brick, err = NewBrickEntryFromId(tx, id)
 		if err == ErrNotFound {
+			logger.Info("Brick [%s] not found", id)
 			http.Error(w, err.Error(), http.StatusNotFound)
 			return err
 		} else if err != nil {
